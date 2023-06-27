@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap');
+
+/* RESET CONFIG */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+body {
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #707070;             
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0097ff;   
+  border-radius: 20px;
+}
