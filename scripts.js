@@ -3,29 +3,41 @@
 function writingLetters() {
     const title = document.querySelector('.writing')
 
-    function writing(element) {
-        const arrayText = element.innerHTML.split('')
-        element.innerHTML = ''
-        arrayText.forEach((text, index) => {
-            setTimeout(() => {
-                element.innerHTML += text
-            }, 80 * index)
-        });
-    }
-    writing(title)
+    const text = title.innerHTML;
+    title.innerHTML = '';
+
+    let index = 0;
+    const interval = setInterval(() => {
+        title.innerHTML += text[index];
+        index++;
+        if (index >= text.length) {
+            clearInterval(interval);
+        }
+    }, 75);
 }
+writingLetters()
+
 
 const activeMenu = document.querySelector('.fa-bars')
 const navMenu = document.querySelector('.header .primary-navgation')
-
-
-
-
 
 activeMenu.addEventListener('click', () => {
     activeMenu.classList.toggle('fa-x')
     navMenu.classList.toggle('active')
 })
+
+const menuLinks = document.querySelectorAll('.primary-navgation')
+
+
+for (let i = 0; i < menuLinks.length; i++) {
+    menuLinks[i].addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+            activeMenu.classList.remove('fa-x');
+            navMenu.classList.remove('active');
+        }
+    });
+}
+    
 
 
 const listAll = document.querySelectorAll('.project-content ul li')
@@ -45,6 +57,7 @@ buttonsNav.forEach((event, index) => {
         removeClick(index)
     })
 });
+
 
 function showList(list, button = 'all') {
     list.forEach(item => {

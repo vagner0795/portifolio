@@ -15,7 +15,10 @@
 body {
     max-width: 1300px;
     margin: 0 auto;
-    background-color: #000000;
+    background-image: url('../img/banner-projects.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 body::-webkit-scrollbar {
@@ -27,3 +30,38 @@ body::-webkit-scrollbar-thumb {
   background-color: #0097ff;   
   border-radius: 20px;
 }
+
+/* TEXT CONFIG */
+
+.container{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.container h1{
+  color: #0097ff;
+  
+}
+
+.container p{
+  color: #707070;
+  font-size: 20px;
+}
+.container a{
+  color: #ffffff;
+  padding: 15px 30px;
+  background-color: #222222;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.container a:hover{
+  background-color: #0097ff;
+  transition: .6s ease-in-out;
+}
+
+
